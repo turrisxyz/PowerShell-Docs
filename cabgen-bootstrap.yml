@@ -1,0 +1,14 @@
+trigger:
+- live
+
+pr: none # Disable pull request triggers.
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Content CI/ReferenceAutomation
+      ref: refs/heads/cabgen-pipeline-template # change to master after test
+
+extends:
+  template: PowerShell/cabgen.yml@templates
